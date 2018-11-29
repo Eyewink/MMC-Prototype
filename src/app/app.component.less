@@ -1,67 +1,100 @@
-#logo {
-	position: absolute;
-	top: 35px;
-	left: 30px;
-	cursor: pointer;
+:host {
+	display: grid;
+	grid-template-columns: repeat(11, minmax(100px, 1fr));
+	grid-template-rows: 1fr 1fr;
+	height: 100%;
 }
 
 #content {
-	display: block;
+	grid-column-start: 3;
+	grid-column-end: 12;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	
 	background: #fff;
-	margin-left: 250px;
-	height: 100%;
 	box-shadow: 0 0 30px rgba(0, 0, 0, .1);
 }
 
-#profile {
-	position: absolute;
-	top: 17px;
-	right: 17px;
-	z-index: 1000;
+
+#logo {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	
+	margin: 35px 0 0 30px;
+	
+	> img {
+		cursor: pointer;
+	}
 }
 
 #number {
-	position: absolute;
-	box-sizing: border-box;
-	left: 0;
-	bottom: 70px;
-	width: 250px;
+	display: inline-grid;
 	
-	border-top: 1px solid #eee;
+	grid-column-start: 1;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 3;
 	
-	> label {
+	align-self: end;
+	margin-bottom: 75px;
+	
+	height: 1px;
+	background: #eee;
+	
+	&::before {
+		content: 'Талон:';
+
 		position: absolute;
+		z-index: 1;
+
 		font-size: 8pt;
 		color: #444E69;
 		opacity: 0.5;
-		margin-top: -7px;
+		margin-top: -6px;
 		left: 30px;
 	}
 	
 	> span {
-		cursor: pointer;
+		display: inline-grid;
+		z-index: 2;
 		
-		display: grid;
 		justify-content: center;
 		align-content: center;
 		
-		position: absolute;
-		width: 80px;
+		cursor: pointer;
+		
 		height: 35px;
 		
 		border: 1px solid #999;
 		border-radius: 10px;
 		
 		background-color: #fff;
-		background-image: linear-gradient(rgba(255, 255, 255, 1) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(255, 255, 255, 0));
+		background-image: linear-gradient(rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.1) 50%, rgba(255, 255, 255, 0));
 		
-		margin-top: -19px;
-		left: 85px;
+		margin: -18px auto 0 auto;
 		
 		box-sizing: border-box;
-		padding-left: 2px;
+		padding: 0 15px 0 16px;
 		
 		font-size: 1.2rem;
 		letter-spacing: 3px;
+		
+		&:hover {
+			background-color: #D6F0F6;
+		}
 	}
+}
+
+#profile {
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	top: 17px;
+	right: 17px;
+	z-index: 1000;
+	
+	background: url("../assets/Images/Profile.svg") no-repeat;
+	cursor: pointer;
 }
