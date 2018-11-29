@@ -1,0 +1,33 @@
+<nav class="back">
+	<a class="icon arrow_left" routerLink="/">ВНЖ: Предварительная запись</a>
+</nav>
+
+<h1 class="icon results">Результат поиска</h1>
+
+<nav class="add">
+	<a href="" class="icon add">Создать профиль</a>
+</nav>
+
+<nav class="options"></nav>
+
+<div class="data">
+	<table>
+		<tr>
+			<th>ФИО</th>
+			<th>Дата рождения</th>
+			<th>Паспорт</th>
+			<th>Гражданство</th>
+			<th>Номер телефона</th>
+		</tr>
+		<tr *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]">
+			<td>
+				<span class="last_name male">Алиев {{ i }}</span>
+				Тимур Александрович
+			</td>
+			<td>25.03.1994</td>
+			<td>Р49778437</td>
+			<td>Азербайджан</td>
+			<td>+7 920 187-26-28</td>
+		</tr>
+	</table>
+</div>
