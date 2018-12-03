@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { StartComponent } from './start.component';
+import { ProfileComponent } from './profile.component';
 
 const routes: Routes = [
-	{ path: '', component: StartComponent }
+	{ path: '', component: ProfileComponent },
+	{ path: '**', redirectTo: '' }
 ];
 
 @NgModule({
 	imports: [ RouterModule.forChild(routes) ],
 	exports: [ RouterModule ]
 })
-export class StartRoutingModule {
+export class ProfileRoutingModule {
 }

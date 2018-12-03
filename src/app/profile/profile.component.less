@@ -1,0 +1,68 @@
+:host {
+	display: grid;
+	height: 100%;
+	grid-template-columns: repeat(9, 1fr);
+	grid-template-rows: 60px auto;
+	
+	> nav.back {
+		grid-column-start: 1;
+		grid-column-end: 10;
+		grid-row-start: 1;
+		grid-row-end: 2;
+		
+		padding: 20px 0 0 50px;
+		text-transform: uppercase;
+		font-size: 0.9rem;
+		
+		> a {
+			text-decoration: none;
+			color: #444E69;
+			
+			&:hover {
+				color: #31B6D3;
+			}
+			
+			&::before {
+				margin-top: -2px;
+			}
+		}
+	}
+	
+	> .content {
+		position: relative;
+		
+		grid-column-start: 1;
+		grid-column-end: 5;
+		grid-row-start: 2;
+		grid-row-end: 3;
+		
+		border-right: 1px solid #eee;
+		padding: 10px 50px;
+		
+		> h1 {
+			font-size: 2vw;
+			font-weight: normal;
+			text-transform: uppercase;
+			margin: 0 0 2em 0;
+			
+			align-self: center;
+			
+			&::before {
+				margin-top: .2em;
+			}
+		}
+		
+		> .close {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			width: 20px;
+			height: 20px;
+			z-index: 200;
+			background: url("../../assets/Images/icons/Close-square.svg") no-repeat;
+			cursor: pointer;
+		}
+		
+	}
+	
+}

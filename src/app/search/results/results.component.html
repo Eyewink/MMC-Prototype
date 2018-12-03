@@ -1,0 +1,42 @@
+<nav class="back">
+	<a class="icon arrow_left" routerLink="/vng">Поиск гражданина</a>
+</nav>
+
+<h1 class="icon results">Результат поиска</h1>
+
+<nav class="add" *ngIf="!test">
+	<a routerLink="/profile" class="icon add">Создать профиль</a>
+</nav>
+
+<nav (click)="test=!test" class="options"></nav>
+
+<section class="options" *ngIf="test">
+	<div routerLink="/profile" class="add"></div>
+	<div class="close" (click)="test=!test"></div>
+	<h1 class="icon search">Поиск профиля иностранного гражданина</h1>
+	<app-search-form></app-search-form>
+</section>
+
+<section (click)="test=!test" class="overlay" *ngIf="test"></section>
+
+<section class="data">
+	<table>
+		<tr>
+			<th>ФИО</th>
+			<th>Дата рождения</th>
+			<th>Паспорт</th>
+			<th>Гражданство</th>
+			<th>Номер телефона</th>
+		</tr>
+		<tr routerLink="/pre" *ngFor="let i of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]">
+			<td>
+				<span class="last_name male">Алиев {{ i }}</span>
+				Тимур Александрович
+			</td>
+			<td>25.03.1994</td>
+			<td>Р49778437</td>
+			<td>Азербайджан</td>
+			<td>+7 920 187-26-28</td>
+		</tr>
+	</table>
+</section>

@@ -1,7 +1,7 @@
 :host {
 	display: grid;
 	height: 100%;
-	grid-template-columns: repeat(9, minmax(100px, 1fr));
+	grid-template-columns: repeat(9, 1fr);
 	grid-template-rows: 60px auto;
 	
 	> nav.back {
@@ -29,6 +29,8 @@
 	}
 	
 	> .content {
+		position: relative;
+		
 		grid-column-start: 1;
 		grid-column-end: 5;
 		grid-row-start: 2;
@@ -38,17 +40,27 @@
 		padding: 10px 50px;
 		
 		> h1 {
-			all:unset;
-			
-			display: block;
-			font-size: 2rem;
+			font-size: 2vw;
+			font-weight: normal;
 			text-transform: uppercase;
-			margin-bottom: 2em;
+			margin: 0 0 2em 0;
 			
 			&::before {
 				margin-top: .2em;
 			}
 		}
+		
+		> .add {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			width: 20px;
+			height: 20px;
+			z-index: 200;
+			background: url("../../assets/Images/icons/Add.svg") no-repeat;
+			cursor: pointer;
+		}
+		
 	}
 	
 }

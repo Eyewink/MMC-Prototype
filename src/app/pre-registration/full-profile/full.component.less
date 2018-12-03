@@ -1,4 +1,5 @@
 :host {
+	padding: 2em 50px;
 	
 	> form {
 		> input[type=text] {
@@ -12,7 +13,7 @@
 			border: none;
 			border-bottom: 1px solid #D6D8DE;
 			
-			font-size: 1.5rem;
+			font-size: 1.2rem;
 			font-weight: normal;
 			
 			margin-bottom: 1.5em;
@@ -27,6 +28,28 @@
 			
 			&.short {
 				width: 50%;
+			}
+			
+			&.search {
+				box-sizing: border-box;
+				text-overflow: ellipsis;
+				padding-right: 30px;
+				background: url("../../../assets/Images/icons/form_search.svg") no-repeat e("calc(100% - 5px)") 50%;
+			}
+			
+			&.datepicker {
+				box-sizing: border-box;
+				text-overflow: ellipsis;
+				padding-right: 30px;
+				background: url("../../../assets/Images/icons/form_datepicker.svg") no-repeat e("calc(100% - 5px)") 50%;
+				
+			}
+			
+			&.select {
+				box-sizing: border-box;
+				text-overflow: ellipsis;
+				padding-right: 30px;
+				background: url("../../../assets/Images/icons/form_down.svg") no-repeat e("calc(100% - 5px)") 50%;
 			}
 		}
 		
@@ -43,12 +66,12 @@
 			height: 40px;
 			background: linear-gradient(#86D4E4, #5CB4CF);
 			border: 1px solid #5CB4CF;
-
+			
 			font-family: "Fira Sans", serif;
 			color: #fff;
 			font-size: 1em;
 			text-shadow: 0 1px 0 #5CB4CF;
-
+			
 			margin-top: 5em;
 		}
 		
@@ -56,6 +79,7 @@
 			float: right;
 			width: 40%;
 			text-transform: lowercase;
+			font-size: .9rem;
 			white-space: nowrap;
 			overflow: hidden;
 			text-overflow: ellipsis;

@@ -1,0 +1,26 @@
+<section class="history">
+	<h2 routerLink="/pre/cause" class="icon cause">Высококвалифицированный специалист</h2>
+</section>
+<h1 class="icon docs">Наличие документов</h1>
+<section class="data scroll">
+	<ol>
+		<li (click)="toggleClass(0)" [class.active]="isActive[0]">Заявление в двух экземплярах</li>
+		<li (click)="toggleClass(1)" [class.active]="isActive[1]">Четыре личные фотографии размером 35 x 45 мм в черно-белом или цветном исполнении с четким изображением лица анфас без головного убора</li>
+		<li (click)="toggleClass(2)" [class.active]="isActive[2]">Документ, удостоверяющий личность</li>
+		<li (click)="toggleClass(3)" [class.active]="isActive[3]">Документ, подтверждающий наличие законного источника средств к существованию, позволяющего содержать себя в Российской Федерации в пределах прожиточного минимума, или документ, подтверждающий нетрудоспособность заявителя</li>
+		<li (click)="toggleClass(4)" [class.active]="isActive[4]">Документ, подтверждающий наличие права собственности (иного права) на жилое помещение</li>
+		<li (click)="toggleClass(5)" [class.active]="isActive[5]">Медицинская справка № 384н</li>
+		<li (click)="toggleClass(6)" [class.active]="isActive[6]">Сертификат об отсутствии у заявителя заболевания, вызываемого вирусом иммунодефицита человека (ВИЧ-инфекции)</li>
+		<li (click)="toggleClass(7)" [class.active]="isActive[7]">Документ, подтверждающий владение данным иностранным гражданином русским языком, знание истории России и основ законодательства Российской Федерации</li>
+	</ol>
+	<input routerLink="/pre/time" type="button" value="Выбрать время" />
+</section>
+<section class="services">
+	<h3 class="icon money">Платные услуги</h3>
+	<ul>
+		<li class="icon services">Консультация</li>
+		<li class="icon services">Тестирование</li>
+		<li class="icon services">Медицинское освидетельствование</li>
+		<li class="icon services">Услуги нотариуса и перевод документов</li>
+	</ul>
+</section>

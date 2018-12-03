@@ -1,0 +1,50 @@
+<nav class="back" *ngIf="getState(1)">
+	<a class="icon arrow_left" routerLink="/search/results">Результат поиска</a>
+</nav>
+
+<nav class="back cancel" *ngIf="getState(2)">
+	<a class="icon arrow_left" routerLink="/pre/cancel">Отменить запись</a>
+</nav>
+
+<nav class="back return" *ngIf="getState(3)">
+	<a class="icon arrow_left" onclick="javascript:history.back();">Назад</a>
+</nav>
+
+<section class="profile_full" *ngIf="test">
+	<div class="close" (click)="test=!test"></div>
+	<h1 class="icon profile">Профиль гражданина</h1>
+	<app-full-profile></app-full-profile>
+	<section class="history">
+		<h2 class="icon running">Активные записи</h2>
+		<ul>
+			<li>
+				<div class="icon delete"></div>
+				<div class="date">13 декабря 2018 – 9:10</div>
+				<div class="desc">РВП: Предварительная запись</div>
+			</li>
+		</ul>
+		<h2 class="icon history">История посещений</h2>
+		<ul>
+			<li>
+				<div class="date">21 марта 2015</div>
+				<div class="desc">Заявление на получение патента</div>
+				<a href="">№ 18762567</a>
+			</li>
+			<li>
+				<div class="date">12 августа 2013</div>
+				<div class="desc">Заявление на получение патента</div>
+				<a href="">№ 8762567</a>
+			</li>
+		</ul>
+	</section>
+</section>
+
+<section (click)="test=!test" class="overlay" *ngIf="test"></section>
+
+<section (click)="test=!test" class="profile">
+	<app-short-profile></app-short-profile>
+</section>
+
+<section class="content">
+	<router-outlet></router-outlet>
+</section>

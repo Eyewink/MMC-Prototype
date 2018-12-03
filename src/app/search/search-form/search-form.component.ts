@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
 	selector: 'app-search-form',
-	templateUrl: './form.component.html',
-	styleUrls: [ './form.component.less' ]
+	templateUrl: './search-form.component.html',
+	styleUrls: [ './search-form.component.less' ]
 })
 export class FormComponent implements OnInit {
 

@@ -1,0 +1,96 @@
+:host {
+	display: grid;
+	
+	> form {
+		> input[type=text] {
+			
+			font-family: "Fira Sans", serif;
+			color: #444E69;
+			
+			display: block;
+			width: 100%;
+			
+			border: none;
+			border-bottom: 1px solid #D6D8DE;
+			
+			font-size: 1.2rem;
+			font-weight: normal;
+			
+			margin-bottom: 1.5em;
+			
+			&::placeholder {
+				color: #ccc;
+			}
+			
+			&:focus {
+				outline: none;
+			}
+			
+			&.short {
+				width: 50%;
+			}
+			
+			&.search {
+				box-sizing: border-box;
+				text-overflow: ellipsis;
+				padding-right: 30px;
+				background: url("../../../assets/Images/icons/form_search.svg") no-repeat e("calc(100% - 5px)") 50%;
+			}
+			
+			&.datepicker {
+				box-sizing: border-box;
+				text-overflow: ellipsis;
+				padding-right: 30px;
+				background: url("../../../assets/Images/icons/form_datepicker.svg") no-repeat e("calc(100% - 5px)") 50%;
+				
+			}
+			
+			&.select {
+				box-sizing: border-box;
+				text-overflow: ellipsis;
+				padding-right: 30px;
+				background: url("../../../assets/Images/icons/form_down.svg") no-repeat e("calc(100% - 5px)") 50%;
+			}
+		}
+		
+		> input[type=button] {
+			
+			display: block;
+			position: relative;
+			left: 50%;
+			margin-left: -75px;
+			
+			cursor: pointer;
+			
+			width: 150px;
+			height: 40px;
+			background: linear-gradient(#86D4E4, #5CB4CF);
+			border: 1px solid #5CB4CF;
+			
+			font-family: "Fira Sans", serif;
+			color: #fff;
+			font-size: 1em;
+			text-shadow: 0 1px 0 #5CB4CF;
+			
+			margin-top: 5em;
+		}
+		
+		> label {
+			float: right;
+			width: 40%;
+			text-transform: lowercase;
+			font-size: .9rem;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			
+			opacity: 0.5;
+			margin-top: .5em;
+			
+			&::before {
+				content: '–';
+				margin-right: 1em;
+			}
+		}
+	}
+}
