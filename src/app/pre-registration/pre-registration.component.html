@@ -1,17 +1,17 @@
-<nav class="back" *ngIf="getState(1)">
+<nav class="back" *ngIf="getData(1)">
 	<a class="icon arrow_left" routerLink="/search/results">Результат поиска</a>
 </nav>
 
-<nav class="back cancel" *ngIf="getState(2)">
+<nav class="back cancel" *ngIf="getData(2)">
 	<a class="icon arrow_left" routerLink="/pre/cancel">Отменить запись</a>
 </nav>
 
-<nav class="back return" *ngIf="getState(3)">
+<nav class="back return" *ngIf="getData(3)">
 	<a class="icon arrow_left" onclick="javascript:history.back();">Назад</a>
 </nav>
 
-<section class="profile_full" *ngIf="test">
-	<div class="close" (click)="test=!test"></div>
+<section class="profile_full" *ngIf="state()">
+	<div class="close" (click)="toggle()"></div>
 	<h1 class="icon profile">Профиль гражданина</h1>
 	<app-full-profile></app-full-profile>
 	<section class="history">
@@ -39,9 +39,9 @@
 	</section>
 </section>
 
-<section (click)="test=!test" class="overlay" *ngIf="test"></section>
+<section (click)="toggle()" class="overlay" *ngIf="state()"></section>
 
-<section (click)="test=!test" class="profile">
+<section (click)="toggle()" class="profile">
 	<app-short-profile></app-short-profile>
 </section>
 

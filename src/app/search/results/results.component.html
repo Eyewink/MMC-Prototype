@@ -4,20 +4,20 @@
 
 <h1 class="icon results">Результат поиска</h1>
 
-<nav class="add" *ngIf="!test">
+<nav class="add" *ngIf="!state()">
 	<a routerLink="/profile" class="icon add">Создать профиль</a>
 </nav>
 
-<nav (click)="test=!test" class="options"></nav>
+<nav (click)="toggle()" class="options"></nav>
 
-<section class="options" *ngIf="test">
+<section class="options" *ngIf="state()">
 	<div routerLink="/profile" class="add"></div>
-	<div class="close" (click)="test=!test"></div>
+	<div class="close" (click)="toggle()"></div>
 	<h1 class="icon search">Поиск профиля иностранного гражданина</h1>
 	<app-search-form></app-search-form>
 </section>
 
-<section (click)="test=!test" class="overlay" *ngIf="test"></section>
+<section (click)="toggle()" class="overlay" *ngIf="state()"></section>
 
 <section class="data">
 	<table>

@@ -7,14 +7,23 @@ import { ActivatedRoute } from '@angular/router';
 	styleUrls: [ './pre-registration.component.less' ]
 })
 export class PreRegistrationComponent implements OnInit {
+	private __state = false;
+
 	constructor(private router: ActivatedRoute) {
 	}
 
 	ngOnInit() {
 	}
 
-	getState(id): boolean {
-		return  id === this.router.snapshot.children[0].data['cancel'];
+	toggle() {
+		this.__state = !this.__state;
+	}
+	state(): boolean {
+		return this.__state;
+	}
+
+	getData(id): boolean {
+		return id === this.router.snapshot.children[0].data['cancel'];
 	}
 
 }

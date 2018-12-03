@@ -11,8 +11,16 @@
 		grid-row-start: 1;
 		grid-row-end: 2;
 		
-		background: url("../assets/Images/Logo.svg") no-repeat 30px 35px;
-		cursor: pointer;
+		
+		> a {
+			display: block;
+			width: 182px;
+			height: 40px;
+			
+			background: url("../assets/Images/Logo.svg") no-repeat;
+			
+			margin: 35px 0 0 30px;
+		}
 		
 	}
 	
@@ -98,7 +106,12 @@
 		grid-template-columns: 50px 50px repeat(9, 1fr);
 		
 		#logo {
-			background: url("../assets/Images/Logo_sign.svg") no-repeat 50% 35px;
+			> a {
+				margin: 35px auto;
+				width: 40px;
+				height: 40px;
+				background: url("../assets/Images/Logo_sign.svg");
+			}
 		}
 		
 		#number {
