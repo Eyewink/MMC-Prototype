@@ -14,10 +14,12 @@ export class ResultsComponent implements OnInit {
 	ngOnInit() {
 	}
 
+	off () {
+		this.__state = false;
+	}
 	toggle() {
 		this.__state = !this.__state;
 	}
-
 	state(): boolean {
 		return this.__state;
 	}

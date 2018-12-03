@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 
 @Component({
 	selector: 'app-pre-registration',
@@ -9,10 +9,19 @@ import { ActivatedRoute } from '@angular/router';
 export class PreRegistrationComponent implements OnInit {
 	private __state = false;
 
-	constructor(private router: ActivatedRoute) {
+	constructor(private router: ActivatedRoute, private rout: Router) {
+		this.rout.events.subscribe((e) => {
+			if (e instanceof NavigationEnd) {
+				this.__state = false;
+			}
+		});
 	}
 
 	ngOnInit() {
+	}
+
+	off() {
+		this.__state = false;
 	}
 
 	toggle() {
