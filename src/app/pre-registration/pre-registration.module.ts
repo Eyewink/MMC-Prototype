@@ -10,6 +10,7 @@ import { DatetimeComponent } from './datetime/datetime.component';
 import { CommentsComponent } from './comments/comments.component';
 import { CancelComponent } from './cancel/cancel.component';
 import { FullComponent } from './full-profile/full.component';
+import { CouponComponent } from './coupon/coupon.component';
 
 @NgModule({
 	declarations: [
@@ -20,7 +21,8 @@ import { FullComponent } from './full-profile/full.component';
 		DatetimeComponent,
 		CommentsComponent,
 		CancelComponent,
-		FullComponent
+		FullComponent,
+		CouponComponent
 	],
 	imports: [
 		CommonModule,

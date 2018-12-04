@@ -6,16 +6,19 @@ import { DocumentsComponent } from './documents/documents.component';
 import { DatetimeComponent } from './datetime/datetime.component';
 import { CommentsComponent } from './comments/comments.component';
 import { CancelComponent } from './cancel/cancel.component';
+import { CouponComponent } from './coupon/coupon.component';
 
 const routes: Routes = [
-	{ 	path: '',
+	{
+		path: '',
 		component: PreRegistrationComponent,
 		children: [
 			{ path: 'cause', component: CauseComponent, data: { cancel: 1 } },
 			{ path: 'docs', component: DocumentsComponent, data: { cancel: 2 } },
-			{ path: 'time', component: DatetimeComponent, data: { cancel: 2 }},
-			{ path: 'comments', component: CommentsComponent, data: { cancel: 2 }},
-			{ path: 'cancel', component: CancelComponent, data: { cancel: 3 }},
+			{ path: 'time', component: DatetimeComponent, data: { cancel: 2 } },
+			{ path: 'comments', component: CommentsComponent, data: { cancel: 2 } },
+			{ path: 'cancel', component: CancelComponent, data: { cancel: 3 } },
+			{ path: 'complete', component: CouponComponent, data: { cancel: 4 } },
 			{ path: '**', redirectTo: 'cause' }
 		]
 	},

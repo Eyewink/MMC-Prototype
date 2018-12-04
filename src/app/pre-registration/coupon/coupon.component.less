@@ -1,0 +1,70 @@
+:host {
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	height: 100%;
+	
+	> section.coupon {
+		position: relative;
+		
+		color: #333;
+		background: #fff;
+		width: 50vmax;
+		border: 1px solid #ccc;
+		padding: 50px;
+		line-height: 1.5;
+		
+		box-shadow: 3px 3px 10px rgba(0,0,0,.1);
+	
+		> div {
+			position: absolute;
+			font-size: 0.8rem;
+			top: 10px;
+			
+			&.date {
+				left: 15px;
+			}
+			
+			&.id {
+				right: 15px;
+			}
+		}
+		
+		> p {
+			> span {
+				display: block;
+				
+				&.fio {
+					text-transform: uppercase;
+					margin: 1em 0;
+				}
+				
+				&.date {
+					margin: 0 0 1em 0;
+				}
+			}
+		}
+		
+		> img {
+			display: grid;
+			margin: 2em auto 0 auto;
+		}
+	}
+	
+	> input[type=button] {
+		cursor: pointer;
+		
+		width: 150px;
+		height: 40px;
+		background: linear-gradient(#86D4E4, #5CB4CF);
+		border: 1px solid #5CB4CF;
+		
+		font-family: "Fira Sans", serif;
+		color: #fff;
+		font-size: 1em;
+		text-shadow: 0 1px 0 #5CB4CF;
+		
+		margin: 5em auto 0 auto;
+	}
+	
+}
