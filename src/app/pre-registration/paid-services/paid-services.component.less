@@ -1,0 +1,106 @@
+:host {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: 60px e("calc(100vh - 120px)");
+	
+	> h1 {
+		font-size: 2vmax;
+		font-weight: normal;
+		text-transform: uppercase;
+		
+		padding: 0 50px;
+		
+		align-self: center;
+
+		grid-column-start: 1;
+		grid-column-end: 8;
+		grid-row-start: 1;
+		grid-row-end: 2;
+		
+		&::before {
+			margin-top: .4vmax;
+		}
+	}
+	
+	> .scroll {
+		overflow-y: auto;
+		padding: 1em 50px 50px 50px;
+		
+		grid-column-start: 1;
+		grid-column-end: 8;
+		grid-row-start: 2;
+		grid-row-end: 3;
+		
+		> ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			
+			> li {
+				cursor: pointer;
+				
+				margin-bottom: 2em;
+				padding-right: 10vmax;
+				
+				background: url("../../../assets/images/Switch.svg") no-repeat e("calc(100% - 5vmax + 50px)") 5px;
+				
+				&.active {
+					background-image: url("../../../assets/images/Switch_active.svg");
+				}
+				
+				&:first-child {
+					margin-bottom: 5em;
+					
+					> h2 {
+						font-size: 1.5vmax;
+					}
+				}
+				
+				> .price {
+					float: right;
+					font-size: 2vmax;
+					&::after {
+						content: '₽';
+//						font-size: 1.5vmax;
+						color: #ccc;
+					}
+				}
+				
+				> h2 {
+					font-size: 1.2vmax;
+					font-weight: normal;
+					margin: 0 0 .5em 0;
+					padding: 0;
+				}
+				
+				> p {
+					color: #999;
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+		
+		> input[type=button] {
+			
+			display: block;
+			position: relative;
+			left: 50%;
+			margin-left: -75px;
+			
+			cursor: pointer;
+			
+			width: 150px;
+			height: 40px;
+			background: linear-gradient(#86D4E4, #5CB4CF);
+			border: 1px solid #5CB4CF;
+			
+			font-family: "Fira Sans", serif;
+			color: #fff;
+			font-size: 1em;
+			text-shadow: 0 1px 0 #5CB4CF;
+			
+			margin-top: 5em;
+		}
+	}
+}

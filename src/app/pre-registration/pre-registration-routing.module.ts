@@ -7,6 +7,7 @@ import { DatetimeComponent } from './datetime/datetime.component';
 import { CommentsComponent } from './comments/comments.component';
 import { CancelComponent } from './cancel/cancel.component';
 import { CouponComponent } from './coupon/coupon.component';
+import { PaidServicesComponent } from './paid-services/paid-services.component';
 
 const routes: Routes = [
 	{
@@ -19,6 +20,7 @@ const routes: Routes = [
 			{ path: 'comments', component: CommentsComponent, data: { cancel: 2 } },
 			{ path: 'cancel', component: CancelComponent, data: { cancel: 3 } },
 			{ path: 'complete', component: CouponComponent, data: { cancel: 4 } },
+			{ path: 'paid', component: PaidServicesComponent, data: { cancel: 3} },
 			{ path: '**', redirectTo: 'cause' }
 		]
 	},

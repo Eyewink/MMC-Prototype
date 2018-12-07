@@ -11,6 +11,7 @@ import { CommentsComponent } from './comments/comments.component';
 import { CancelComponent } from './cancel/cancel.component';
 import { FullComponent } from './full-profile/full.component';
 import { CouponComponent } from './coupon/coupon.component';
+import { PaidServicesComponent } from './paid-services/paid-services.component';
 
 @NgModule({
 	declarations: [
@@ -22,7 +23,8 @@ import { CouponComponent } from './coupon/coupon.component';
 		CommentsComponent,
 		CancelComponent,
 		FullComponent,
-		CouponComponent
+		CouponComponent,
+		PaidServicesComponent
 	],
 	imports: [
 		CommonModule,
