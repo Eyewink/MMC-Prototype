@@ -10,7 +10,7 @@ export class DocumentsComponent implements OnInit {
 	constructor() {}
 
 	toggleClass(id) {
-		this.isActive[id] = !this.isActive[id];
+		this.isActive[id] = !this.isActive[id]
 	}
 
 	ngOnInit() {

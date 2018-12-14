@@ -12,7 +12,7 @@ export class PreRegistrationComponent implements OnInit {
 	constructor(private router: ActivatedRoute, private rout: Router) {
 		this.rout.events.subscribe((e) => {
 			if (e instanceof NavigationEnd) {
-				this.__state = false;
+				this.__state = false
 			}
 		});
 	}
@@ -21,18 +21,18 @@ export class PreRegistrationComponent implements OnInit {
 	}
 
 	off() {
-		this.__state = false;
+		this.__state = false
 	}
 
 	toggle() {
-		this.__state = !this.__state;
+		this.__state = !this.__state
 	}
 	state(): boolean {
-		return this.__state;
+		return this.__state
 	}
 
 	getData(id): boolean {
-		return id === this.router.snapshot.children[0].data['cancel'];
+		return id === this.router.snapshot.children[0].data['cancel']
 	}
 
 }
